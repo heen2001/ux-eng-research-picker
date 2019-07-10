@@ -1,0 +1,323 @@
+{
+    "UXRMethods": [{
+           "id": "rm-01",
+           "name": "Usability-Lab Studies",
+           "desc": "Participants are brought into a lab, one-on-one with a researcher, and given a set of scenarios that lead to tasks and usage of specific interest within a product or service.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "scripted",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-02",
+           "name": "Ethnographic Field Studies",
+           "desc": "Researchers meet with and study participants in their natural environment, where they would most likely encounter the product or service in question.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": true,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": false
+        },
+         {
+           "id": "rm-03",
+           "name": "Participatory Design",
+           "desc": "Participants are given design elements or creative materials in order to construct their ideal experience in a concrete way that expresses what matters to them most and why.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "hybrid",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-04",
+           "name": "Focus Groups",
+           "desc": "Groups of 3–12 participants are lead through a discussion about a set of topics, giving verbal and written feedback through discussion and exercises.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "de-contextualised",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": false
+        },
+         {
+           "id": "rm-05",
+           "name": "Interviews",
+           "desc": "A researcher meets with participants one-on-one to discuss in depth what the participant thinks about the topic in question.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "de-contextualised",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": false
+        },
+         {
+           "id": "rm-06",
+           "name": "Eyetracking",
+           "desc": "An eyetracking device is configured to precisely measure where participants look as they perform tasks or interact naturally with websites, applications, physical products, or environments.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "natural",
+              "scripted"
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-07",
+           "name": "Usability Benchmarking",
+           "desc": "Tightly scripted usability studies are performed with several participants, using precise and predetermined measures of performance.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "scripted",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": false,
+           "processAssess": true
+        },
+         {
+           "id": "rm-08",
+           "name": "Moderated Remote Usability Studies",
+           "desc": "Usability studies conducted remotely with the use of tools such as screen-sharing software and remote control capabilities.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "scripted",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-09",
+           "name": "Unmoderated Remote Panel Studies",
+           "desc": "A panel of trained participants who have video recording and data collection software installed on their own personal devices uses a website or product while thinking aloud, having their experience recorded for immediate playback and analysis by the researcher or company.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "scripted",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-10",
+           "name": "Concept Testing",
+           "desc": "A researcher shares an approximation of a product or service that captures the key essence (the value proposition) of a new concept or product in order to determine if it meets the needs of the target audience; it can be done one-on-one or with larger numbers of participants, and either in person or online.",
+           "qualitative": true,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": false,
+           "contextOfUse": [
+              "hybrid",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-11",
+           "name": "Diary/Camera Studies",
+           "desc": "Participants are given a mechanism (diary or camera) to record and describe aspects of their lives that are relevant to a product or service, or simply core to the target audience; diary studies are typically longitudinal and can only be done for data that is easily recorded by participants.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": false
+        },
+         {
+           "id": "rm-12",
+           "name": "Customer Feedback",
+           "desc": "Open-ended and/or close-ended information provided by a self-selected sample of users, often through a feedback link, button, form, or email.",
+           "qualitative": true,
+           "quantitative": false,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-13",
+           "name": "Desirability Studies",
+           "desc": "Participants are offered different visual-design alternatives and are expected to associate each alternative with a set of  attributes selected from a closed list; these studies can be both qualitative and quantitative.",
+           "qualitative": true,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "hybrid",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-14",
+           "name": "Card Sorting",
+           "desc": "A quantitative or qualitative method that asks users to organize items into groups and assign categories to each group. This method helps create or refine the information architecture of a site by exposing users’ mental models.",
+           "qualitative": true,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "de-contextualised",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-15",
+           "name": "Clickstream Analysis",
+           "desc": "Analyzing the record of screens or pages that users clicks on and sees, as they use a site or software product; it requires the site to be instrumented properly or the application to have telemetry data collection enabled.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": false
+        },
+         {
+           "id": "rm-16",
+           "name": "A/B Testing",
+           "desc": "Also known as “multivariate testing,” “live testing,” or “bucket testing”, a method of scientifically testing different designs on a site by randomly assigning groups of users to interact with each of the different designs and measuring the effect of these assignments on user behavior.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": false,
+           "processAssess": true
+        },
+         {
+           "id": "rm-17",
+           "name": "Unmoderated UX Studies",
+           "desc": "A quantitative or qualitative and automated method that uses a specialized research tool to captures participant behaviors (through software installed on participant computers/browsers) and attitudes (through embedded survey questions), usually by giving participants goals or scenarios to accomplish with a site or prototype.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "scripted",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": true,
+           "processAssess": false
+        },
+         {
+           "id": "rm-18",
+           "name": "True-Intent Studies",
+           "desc": "A method that asks random site visitors what their goal or intention is upon entering the site, measures their subsequent behavior, and asks whether they were successful in achieving their goal upon exiting the site.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": true,
+           "attitudinal": false,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": true,
+           "processExecute": false,
+           "processAssess": true
+        },
+         {
+           "id": "rm-19",
+           "name": "Intercept Surveys",
+           "desc": "A method that asks random site visitors what their goal or intention is upon entering the site, measures their subsequent behavior, and asks whether they were successful in achieving their goal upon exiting the site.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "natural",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": false,
+           "processAssess": true
+        },
+         {
+           "id": "rm-20",
+           "name": "Email Surveys",
+           "desc": "A survey in which participants are recruited from an email message.",
+           "qualitative": false,
+           "quantitative": true,
+           "behavioural": false,
+           "attitudinal": true,
+           "contextOfUse": [
+              "de-contextualised",
+              null
+           ],
+           "processStrategic": false,
+           "processExecute": false,
+           "processAssess": true
+        }
+        ]
+}

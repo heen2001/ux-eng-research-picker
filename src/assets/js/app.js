@@ -24,7 +24,6 @@ $(document).foundation();
 $.BSM = function() {
 
     var store = new Array();
-    console.log("I AM CALLED");
 
     const bitMaskOrder = ["qualitative", "quantitative", "behavioural", "attitudinal", 
             "processStrategic", "processExecute", "processAssess", 
@@ -45,7 +44,7 @@ $.BSM = function() {
     //
     function filterMatches(bitmask) {
         const matches = new Array();
-        store.forEach(elem => { console.log(elem.bitmap + " : " + bitmask); if ((bitmask & elem.bitmap) == bitmask) matches.push(elem.id); });
+        store.forEach(elem => { if ((bitmask & elem.bitmap) == bitmask) matches.push(elem.id); });
         return matches;
     }
 
@@ -118,19 +117,23 @@ $(function() {
             nativeElem.dataset.bitset = bitset;
 
             // update the BSM
-            //$.BitsetManager.addToMap($(nativeElem).attr("id"), bitset);
-            $.BSM.addEntry($(nativeElem).attr("id"), bitset)
+            $.BSM.addEntry($(nativeElem).attr("id"), bitset);
         });
 
     }
     createBitSets();
+
+    // Initial component visibility
+    $('#querySelections').hide();
+    $('#queryAnswers').hide();
+    $('#queryChangerWrapper').hide();
 
 
     /**
      *  Filter the list, to show only the matched elements
      *  
      */
-    $("#filterForm").submit(function(evt) {
+    $("#filterForm").submit((evt) => {
 
         // stop event propagation of form submission
         evt.preventDefault();
@@ -153,30 +156,98 @@ $(function() {
                 queryMask |= partialMask;
             }
         }
-        console.log("queryMask " + queryMask);
-
         let matches = $.BSM.getMatches(queryMask);
-        console.log(matches);
 
-        //console.log(prodDevPhaseSelection + " " +
-        //    contextOfUseSelection + " " +
-        //    dataTypeSelection + " " +
-        //    questionTypeSelection);
+        // Check for zero matched results
+        if (matches.length == 0) {
+            // Show no matches msg
+            Foundation.Motion.animateIn($('#noMatchesMsg'), 'fade-in');
+        }
+        else {
+            // Hide no matches msg
+            $("#noMatchesMsg").hide();
+        }
 
         // 2. Iterate over the items in the list and show/hide the content
         $("#BitItemList > li").each((idx, nativeElem) => {
 
             if (matches.includes(nativeElem.id)) {
-                console.log("show: " + nativeElem.id);
                 $(nativeElem).css("display", "block");
             } 
             else {
-                console.log("hide: " + nativeElem.id);
                 $(nativeElem).css("display", "none");
             }
-            
         });
 
+        // BUILD APPLIED LIST
+        $("#querySelections").empty();
+        $("#queryPanel select").each((idx, elem) => {
+            $("#querySelections").append("<li>" + $("label[for='" + $(elem).attr("id") + "']").text() + ": <strong>" + $(elem).find("option:selected").text() + "</strong></li>")
+        });
+
+        // MANAGE COMPONENT VISIBILITY
+       
+        // small or medium
+        if (!Foundation.MediaQuery.atLeast('large')) {
+            //$(".queryChangerWrapper").addClass('biteme-in');
+            //$('.queryChangerWrapper').show();
+ 
+            Foundation.Motion.animateIn($('#queryChangerWrapper'), 'slide-in-up bounce-in fast');
+
+            Foundation.Motion.animateOut($('#queryPanel'), 'fade-out', () => { 
+                Foundation.Motion.animateIn($('#queryAnswers'), 'fade-in');
+            });
+         }
+         else {
+            Foundation.Motion.animateIn($('#queryAnswers'), 'fade-in');
+         }
+         $('body').addClass('resultState');
+         $('body').removeClass('queryState');
+         
+         // Manage focus for accessibility
+         $('#queryAnswers').focus();
+    });
+
+
+    // QUERY CHANGER BUTTON - Floating fixed panel on small/medium only
+    $("#queryChangerButton").click((evt) => {
+        Foundation.Motion.animateOut($('#queryChangerWrapper'), 'slide-out-down bounce-out fast');
+        Foundation.Motion.animateOut($('#queryAnswers'), 'fade-out', () => {
+            Foundation.Motion.animateIn($('#queryPanel'), 'fade-in');
+        });
+        $('body').addClass('queryState');
+        $('body').removeClass('resultState');
+    });
+
+
+
+    // CHANGE IN BREAKPOINT
+    $(window).on('changed.zf.mediaquery', function(event, newSize, oldSize) {
+        // newSize is the name of the now-current breakpoint, oldSize is the previous breakpoint
+        if($('body').hasClass('queryState')) {
+            if(Foundation.MediaQuery.atLeast('large')) {
+                $('#queryAnswers').hide();
+                $('#queryChangerWrapper').hide();
+            } 
+            else {
+                // medium and below
+                $('#queryAnswers').hide();
+                $('#queryChangerWrapper').hide();
+            }
+        }
+        else if($('body').hasClass('resultState')) {
+            if(Foundation.MediaQuery.atLeast('large')) {
+                $('#queryPanel').show();
+                $('#queryAnswers').show();
+                $('#queryChangerWrapper').hide();
+            } 
+            else {
+                // medium and below
+                $('#queryPanel').hide();
+                $('#queryAnswers').show();
+                $('#queryChangerWrapper').show();
+            }
+        }
     });
 });
 

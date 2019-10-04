@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="15px" viewBox="0 0 17 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Research-Filters-Set" transform="translate(-65.000000, -436.000000)" stroke="#767676">
+            <g id="Group-2" transform="translate(64.000000, 432.000000)">
+                <g id="Group" transform="translate(0.000000, 3.000000)">
+                    <path d="M8.5,15 C11.8356192,15 14.5844001,12.4874462 14.9570055,9.25167574 C14.9759381,9.08726144 14.9902696,8.83670286 15,8.5 C14.9970192,8.31307993 14.9925927,8.1734568 14.9867207,8.08113063 C14.7708161,4.68648078 11.9491387,2 8.5,2 C4.91014913,2 2,4.91014913 2,8.5" id="Oval" stroke-width="2" transform="translate(8.500000, 8.500000) rotate(-101.000000) translate(-8.500000, -8.500000) "></path>
+                    <polygon id="Triangle" fill="#767676" transform="translate(14.502622, 9.502622) rotate(2.000000) translate(-14.502622, -9.502622) " points="14.5026221 11.9222736 12.0829706 7.08297063 16.9222736 7.08297063"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

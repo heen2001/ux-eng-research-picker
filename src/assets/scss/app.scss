@@ -4,6 +4,9 @@
 @import 'foundation';
 @import 'motion-ui';
 
+// App components
+@import 'components/form';
+
 // Global styles
 @include foundation-global-styles;
 @include foundation-forms;

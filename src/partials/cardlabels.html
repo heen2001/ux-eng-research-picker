@@ -1,0 +1,23 @@
+<ul class="no-bullet methodLabels">
+    
+    {{#if this.attitudinal }}
+        <li class="label attitudinal">Attitudinal</li>
+    {{/if}}
+
+    {{#if this.behavioural }}
+        <li class="label behavioural">Behavioural</li>
+    {{/if}}
+    
+    {{#if this.quantitative }}
+        <li class="label quantitative">Quantitative</li>
+    {{/if}}
+    
+    {{#if this.qualitative }}
+        <li class="label qualitative">Qualitative</li>
+    {{/if}}
+
+    {{#each this.contextOfUse}}
+        {{#if this }}<li class="label {{this}}">{{this}}</li>{{/if}}
+    {{/each}}
+    
+</ul>

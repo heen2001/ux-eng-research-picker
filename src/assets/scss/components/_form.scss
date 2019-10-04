@@ -141,7 +141,7 @@ body select:focus {
 
 }
 #resetFilters::before {
-    background: url(/assets/img/icon_reset.svg) center center no-repeat;
+    background: url(../img/icon_reset.svg) center center no-repeat;
     content: "";
     display: inline-block;
     left: 0;
@@ -177,7 +177,7 @@ button.expanderButton{
 }
 
 button.expanderButton::before {
-    background: url(/assets/img/icon_triangle.svg) center center no-repeat;
+    background: url(../img/icon_triangle.svg) center center no-repeat;
     content: "";
     display: block;
     float: left;

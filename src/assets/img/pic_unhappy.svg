@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Layouts" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop---Filtered-Methods---No-Result" transform="translate(-594.000000, -230.000000)">
+            <g id="Group-2" transform="translate(597.000000, 233.000000)">
+                <circle id="Oval" stroke="#8A8A8A" stroke-width="6" fill="#F0F0F0" cx="100" cy="100" r="100"></circle>
+                <ellipse id="Oval-Copy-2" fill="#8A8A8A" cx="69" cy="64" rx="7" ry="14"></ellipse>
+                <ellipse id="Oval-Copy-3" fill="#8A8A8A" cx="132" cy="64" rx="7" ry="14"></ellipse>
+                <path d="M141,128 C138.422399,145.486786 121.272532,159 100.5,159 C79.7274684,159 62.577601,145.486786 60,128" id="Path" stroke="#8A8A8A" stroke-width="6" stroke-linecap="round" transform="translate(100.500000, 143.500000) rotate(-180.000000) translate(-100.500000, -143.500000) "></path>
+                <path d="M69,100 C71.7614237,100 74,97.7614237 74,95 C74,92.2385763 69,85 69,85 C69,85 64,92.2385763 64,95 C64,97.7614237 66.2385763,100 69,100 Z" id="Oval" stroke="#C5C6C6" stroke-width="3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

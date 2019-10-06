@@ -45,7 +45,7 @@ $ foundation update
 $ foundation watch
 ```
 
-You should now be able to edit and
+You should now be able to edit and see your updates in the browser.  
 
 For more information on Foundation and Foundation CLI visit,
 

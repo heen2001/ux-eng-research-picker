@@ -10,6 +10,7 @@ body select:focus {
 
 
 // No-js styles
+// -----------
 .no-js #queryPanel form, 
 .no-js #queryAnswers .applied-filter-section,
 .no-js #noMatchesMsg, 
@@ -32,6 +33,7 @@ body select:focus {
 #jsWarning {
     display: none;
 }
+
 
 // queryPanel
 // -----------
@@ -113,6 +115,7 @@ body select:focus {
     padding: rem-calc(10 0 5 0); 
 }
 
+
 // Buttons
 // -----------
 .action-buttons {
@@ -155,7 +158,7 @@ body select:focus {
 
 
 // Applied Filters
-
+// -----------
 .applied-filter-section {
     margin-bottom: rem-calc(20);
 }
@@ -327,6 +330,7 @@ ul.cardList .card {
     color: $white;
     background-color: #65AE00;
 }
+
 
 // Page Footer
 // -----------

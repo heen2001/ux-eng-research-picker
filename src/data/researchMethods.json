@@ -35,8 +35,8 @@
            "id": "rm-03",
            "name": "Participatory Design",
            "desc": "Participants are given design elements or creative materials in order to construct their ideal experience in a concrete way that expresses what matters to them most and why.",
-           "qualitative": false,
-           "quantitative": true,
+           "qualitative": true,
+           "quantitative": false,
            "behavioural": false,
            "attitudinal": true,
            "contextOfUse": [
@@ -51,8 +51,8 @@
            "id": "rm-04",
            "name": "Focus Groups",
            "desc": "Groups of 3–12 participants are lead through a discussion about a set of topics, giving verbal and written feedback through discussion and exercises.",
-           "qualitative": false,
-           "quantitative": true,
+           "qualitative": true,
+           "quantitative": false,
            "behavioural": false,
            "attitudinal": true,
            "contextOfUse": [
@@ -67,8 +67,8 @@
            "id": "rm-05",
            "name": "Interviews",
            "desc": "A researcher meets with participants one-on-one to discuss in depth what the participant thinks about the topic in question.",
-           "qualitative": false,
-           "quantitative": true,
+           "qualitative": true,
+           "quantitative": false,
            "behavioural": false,
            "attitudinal": true,
            "contextOfUse": [

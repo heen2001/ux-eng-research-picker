@@ -119,12 +119,14 @@ body select:focus {
     position: relative;
     margin-left: rem-calc(20);
     transition: background-color 0.2s ease-in;
+    width: 100%;
 }
 
 label .helperText {
     font-size: rem-calc(16);
     font-weight: 300;
-    display: block;
+    display: inline-block;
+    width: 100%;
     padding-bottom: rem-calc(5);
 }
 

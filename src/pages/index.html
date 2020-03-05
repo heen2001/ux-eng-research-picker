@@ -19,12 +19,12 @@
         <div class="grid-x grid-margin-x banner">
           <div class="cell small-4 site-name" >
             <a href="http://www.uxeng.net" target="_blank" rel="noopener noreferrer">
-              UX ENG<span class="show-for-sr">(opens in a new window</span>
+              <span aria-label="U X Eng">UX ENG</span><span class="show-for-sr">(opens in a new window</span>
             </a>
           </div>
           <div class="cell small-8"><h1>Research Picker</h1></div>
         </div>
-        <hr>
+        <hr aria-hidden="true">
 
         <!-- TABS FOR VARIANT QUERIES -->
         <ul class="tabs grid-x" data-tabs id="modeTabs">
@@ -72,12 +72,12 @@
                 
                 <div class="cell radioButton">
                   <input id="prodDevExecute" type="radio" value="processExecute" name="prod_dev_stage" class="show-for-sr">
-                  <label for="prodDevExecute" class="cell">Execution <span class="helperText">Design, build &amp; test</span></label>
+                  <label for="prodDevExecute" class="cell">Execution<span class="helperText">Design, build &amp; test</span></label>
                 </div>
 
                 <div class="cell radioButton">
                   <input id="prodDevAssess" type="radio" value="processAssess" name="prod_dev_stage" class="show-for-sr">
-                  <label for="prodDevAssess" class="cell">Assessment <span class="helperText">Review &amp; refinement</span></label>
+                  <label for="prodDevAssess" class="cell">Assessment <span class="helperText"> Review &amp; refinement</span></label>
                 </div>
 
                 <div class="cell radioButton">
@@ -182,7 +182,7 @@
         </div>
 
         <div class="callout warning icon">
-          <img src="assets/img/icon_warning.svg" alt="">
+          <img src="assets/img/icon_warning.svg" alt="" aria-hidden="true">
           <p>Remember these recommendations are only to be
               used as a guide to help inform your research plan.</p>
         </div>

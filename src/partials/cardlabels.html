@@ -2,34 +2,40 @@
 <ul class="no-bullet methodLabels">
     
     {{#if this.attitudinal }}
-        <li data-tooltip tabindex="0" class="label attitudinal top" title="{{ lookup @root.researchMethods.definitions 'attitudinal' }}">
+        <li role="text" data-tooltip tabindex="0" class="label attitudinal top" aria-describedby="info-{{this.id}}-1" title="{{ lookup @root.researchMethods.definitions 'attitudinal' }}">
             Attitudinal
+            <span id="info-{{this.id}}-1" aria-hidden="true" class="hide">{{ lookup @root.researchMethods.definitions 'attitudinal' }}</span>
         </li>
     {{/if}}
 
     {{#if this.behavioural }}
-        <li data-tooltip tabindex="0" class="label behavioural top" title="{{ lookup @root.researchMethods.definitions 'behavioural' }}">
+        <li role="text" data-tooltip tabindex="0" class="label behavioural top" aria-describedby="info-{{this.id}}-2" title="{{ lookup @root.researchMethods.definitions 'behavioural' }}">
             Behavioural
+            <span id="info-{{this.id}}-2" aria-hidden="true" class="hide">{{ lookup @root.researchMethods.definitions 'behavioural' }}</span>
         </li>
     {{/if}}
     
     {{#if this.quantitative }}
-        <li data-tooltip tabindex="0" class="label quantitative top" title="{{ lookup @root.researchMethods.definitions 'quantitative' }}">
+        <li role="text" data-tooltip tabindex="0" class="label quantitative top" aria-describedby="info-{{this.id}}-3" title="{{ lookup @root.researchMethods.definitions 'quantitative' }}">
             Quantitative
+            <span id="info-{{this.id}}-3" aria-hidden="true" class="hide">{{ lookup @root.researchMethods.definitions 'quantitative' }}</span>
         </li>
     {{/if}}
     
     {{#if this.qualitative }}
-        <li data-tooltip tabindex="0" class="label qualitative top" title="{{ lookup @root.researchMethods.definitions 'qualitative' }}">
+        <li role="text" data-tooltip tabindex="0" class="label qualitative top" aria-describedby="info-{{this.id}}-4" title="{{ lookup @root.researchMethods.definitions 'qualitative' }}">
             Qualitative
+            <span id="info-{{this.id}}-4" aria-hidden="true" class="hide">{{ lookup @root.researchMethods.definitions 'qualitative' }}</span>
         </li>
     {{/if}}
 
     {{#each this.contextOfUse as | context | }}
         {{#if context}}
-            <li data-tooltip tabindex="0" class="label {{context}}" title="{{ lookup @root.researchMethods.definitions context }}">{{ context }}</li>
+            <li role="text" data-tooltip tabindex="0" class="label {{context}}" aria-describedby="info-{{../this.id}}-co-{{@index}}" title="{{ lookup @root.researchMethods.definitions context }}">
+                {{ context }}
+                <span id="info-{{../this.id}}-co-{{@index}}" aria-hidden="true" class="hide">{{ lookup @root.researchMethods.definitions context }}</span>
+            </li>
         {{/if}}
-
     {{/each}}
 
 </ul>

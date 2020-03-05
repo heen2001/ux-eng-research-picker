@@ -13,6 +13,15 @@ require('foundation-sites');
 // the line below
 //import './lib/foundation-explicit-pieces';
 
+jQuery.fn.justtext = function() {
+  
+	return $(this).clone()
+			.children()
+			.remove()
+			.end()
+			.text();
+};
+
 
 $(document).foundation();
 
@@ -141,10 +150,21 @@ $(function() {
         // Gather the state of the selected form
         let selection = new Array();
 
-        selection.push($("#prodDevPhase option:selected").val());
-        selection.push($("#contextOfUse option:selected").val());
-        selection.push($("#dataType option:selected").val());
-        selection.push($("#questionType option:selected").val());
+        if($("#simpleQueryTab> a").attr("aria-selected") == 'true') {
+            
+            //console.log($("input[name=prod_dev_stage]:checked", '#filterForm').val())
+            selection.push($("input[name=prod_dev_stage]:checked", '#filterForm').val());
+            selection.push("any");
+            selection.push("any");
+            selection.push($("input[name=qtype]:checked", '#filterForm').val());
+        }
+        else {
+            selection.push($("#prodDevPhase option:selected").val());
+            selection.push($("#contextOfUse option:selected").val());
+            selection.push($("#dataType option:selected").val());
+            selection.push($("#questionType option:selected").val());
+        }
+        
 
         let queryMask = 0b0;
         // Build the query mask
@@ -181,9 +201,18 @@ $(function() {
 
         // BUILD APPLIED LIST
         $("#querySelections").empty();
-        $("#queryPanel select").each((idx, elem) => {
-            $("#querySelections").append("<li>" + $("label[for='" + $(elem).attr("id") + "']").text() + ": <strong>" + $(elem).find("option:selected").text() + "</strong></li>")
-        });
+
+        // Simple Filters
+        if($("#simpleQueryTab > a").attr("aria-selected") == "true") {
+            $("#simplePanel input[type=radio]:checked").each((idx, elem) => {
+                $("#querySelections").append("<li>" + $(elem).parent().parent().find("legend").text() + ": <strong>" + $("label[for='" + $(elem).attr("id") + "']").justtext() +  "</strong></li>")
+            });
+        }
+        else { // Advanced
+            $("#fullPanel select").each((idx, elem) => {
+                $("#querySelections").append("<li>" + $("label[for='" + $(elem).attr("id") + "']").justtext() + ": <strong>" + $(elem).find("option:selected").text() + "</strong></li>")
+            });
+        }
 
         // MANAGE COMPONENT VISIBILITY
        

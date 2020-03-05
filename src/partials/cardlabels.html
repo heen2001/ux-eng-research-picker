@@ -1,23 +1,35 @@
+<h4 class="h6">Key properties<span class="show-for-sr">for {{ this.name }}</span></h4>
 <ul class="no-bullet methodLabels">
     
     {{#if this.attitudinal }}
-        <li class="label attitudinal">Attitudinal</li>
+        <li data-tooltip tabindex="0" class="label attitudinal top" title="{{ lookup @root.researchMethods.definitions 'attitudinal' }}">
+            Attitudinal
+        </li>
     {{/if}}
 
     {{#if this.behavioural }}
-        <li class="label behavioural">Behavioural</li>
+        <li data-tooltip tabindex="0" class="label behavioural top" title="{{ lookup @root.researchMethods.definitions 'behavioural' }}">
+            Behavioural
+        </li>
     {{/if}}
     
     {{#if this.quantitative }}
-        <li class="label quantitative">Quantitative</li>
+        <li data-tooltip tabindex="0" class="label quantitative top" title="{{ lookup @root.researchMethods.definitions 'quantitative' }}">
+            Quantitative
+        </li>
     {{/if}}
     
     {{#if this.qualitative }}
-        <li class="label qualitative">Qualitative</li>
+        <li data-tooltip tabindex="0" class="label qualitative top" title="{{ lookup @root.researchMethods.definitions 'qualitative' }}">
+            Qualitative
+        </li>
     {{/if}}
 
-    {{#each this.contextOfUse}}
-        {{#if this }}<li class="label {{this}}">{{this}}</li>{{/if}}
+    {{#each this.contextOfUse as | context | }}
+        {{#if context}}
+            <li data-tooltip tabindex="0" class="label {{context}}" title="{{ lookup @root.researchMethods.definitions context }}">{{ context }}</li>
+        {{/if}}
+
     {{/each}}
-    
+
 </ul>

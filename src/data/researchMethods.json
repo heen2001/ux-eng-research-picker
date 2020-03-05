@@ -319,5 +319,15 @@
            "processExecute": false,
            "processAssess": true
         }
-        ]
+   ],
+   "definitions": {
+      "natural": "Research occurs in the users normal environement.",
+      "scripted": "Research undertaken in a scripted setting usually with a set of tasks.",
+      "hybrid": "This method utilises a combination of scripted and natural elements.",
+      "de-contextualised": "This method does not directly involve the product or environment.",
+      "qualitative": "Generates subjective narrative data, can provide 'why' type insights.",
+      "quantitative": "Outputs objective numeric data, can deploy scientific methods.",
+      "attitudinal": "Captures peoples attitudes and opinions, what they think and feel.",
+      "behavioural": "Reveals behaviours and actions, what people are really doing."
+   }
 }

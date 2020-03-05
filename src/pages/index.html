@@ -24,55 +24,134 @@
           </div>
           <div class="cell small-8"><h1>Research Picker</h1></div>
         </div>
-
         <hr>
-        <p>Choose your product development criteria to find
-            relevant user research methods.
-        </p>
 
-        <!-- QUERY FORM -->
-        <form id="filterForm" action="#">
-
-          <label for="prodDevPhase">Product development phase</label>
-          <select id="prodDevPhase" name="prod_dev_phase">
-              <option value="any">All Phases</option>
-              <option value="processStrategic">Strategic - Early stages of prod. dev.</option>
-              <option value="processExecute">Execute - During prod. dev.</option>
-              <option value="processAssess">Assess - At end of prod. dev. cycle</option>
-          </select>
-
-          <label for="contextOfUse">Context of research</label>
-          <select id="contextOfUse" name="context_of_use">
-              <option value="any">All Contexts</option>
-              <option value="natural">Natural - In normal usage</option>
-              <option value="scripted">Scripted - In a scripted setting</option>
-              <option value="hybrid">Hybrid - Mix of natural/scripted</option>
-              <option value="de-contextualised">De-contextualised - Out of usage context</option>
-          </select>
-
-          <label for="dataType">Main output data type</label>
-          <select id="dataType" name="data_type">
-              <option value="any">All data types</option>
-              <option value="quantitative">Quantitative - The What</option>
-              <option value="qualitative">Qualitative - The Why</option>
-          </select>
-
-          <label for="questionType">Research method's main approach</label>
-          <select id="questionType" name="question_type">
-              <option value="any">All approaches</option>
-              <option value="behavioural">Behavioural - What people do</option>
-              <option value="attitudinal">Attitudinal - What people think</option>
-          </select>
+        <!-- TABS FOR VARIANT QUERIES -->
+        <ul class="tabs grid-x" data-tabs id="modeTabs">
+          <li id="simpleQueryTab" class="tabs-title cell small-6 is-active"><a href="#simplePanel" aria-selected="true">Quick Query</a></li>
+          <li id="advancedQueryTab" class="tabs-title cell small-6"><a href="#fullPanel">Full Query</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="modeTabs">
           
-          <!-- FORM BUTTONS, SUBMIT & RESET -->
-          <div class="action-buttons">
-            <button id="resetFilters" type="reset" name="reset" class="button hollow large expanded secondary">
-              Reset search options
-            </button>
-            <button id="applyFilters" type="submit" name="apply" class="button large radius expanded primary">Find matches</button>
-          </div>
-        
-        </form> <!-- CLOSE QUERY FORM -->
+          <!--  SIMPLE QUERY FORM -->
+          <form id="filterForm" action="#">
+          
+            <!-- SIMPLE TAB PANEL -->
+            <div class="tabs-panel is-active" id="simplePanel">
+
+              <fieldset class="cell">
+                <legend class="intro">
+                  I want to find out ...
+                </legend>
+
+                <div class="cell radioButton">
+                  <input id="qtypeAttitudes" type="radio" value="attitudinal" name="qtype" class="show-for-sr">
+                  <label for="qtypeAttitudes" class="cell">What users are thinking <span class="helperText">Attitudes</span></label>
+                </div>
+                
+                <div class="cell radioButton">
+                  <input id="qtypeBehavioural" type="radio" value="behavioural" name="qtype" class="show-for-sr">
+                  <label for="qtypeBehavioural" class="cell">What users are doing <span class="helperText">Behaviours</span></label>
+                </div>
+
+                <div class="cell radioButton">
+                  <input id="qtypeAny" type="radio" value="unsure" name="qtype" class="show-for-sr" checked>
+                  <label for="qtypeAny" class="cell">Everything <span class="helperText">Show all methods</span></label>
+                </div>
+              </fieldset>
+              
+              <fieldset class="cell">
+                <legend class="intro">
+                  Your stage of product development
+                </legend>
+
+                <div class="cell radioButton">
+                  <input id="prodDevStrategic" type="radio" value="processStrategic" name="prod_dev_stage" class="show-for-sr">
+                  <label for="prodDevStrategic" class="cell">Early / Strategic <span class="helperText">Discovery &amp; problem definition</span></label>
+                </div>
+                
+                <div class="cell radioButton">
+                  <input id="prodDevExecute" type="radio" value="processExecute" name="prod_dev_stage" class="show-for-sr">
+                  <label for="prodDevExecute" class="cell">Execution <span class="helperText">Design, build &amp; test</span></label>
+                </div>
+
+                <div class="cell radioButton">
+                  <input id="prodDevAssess" type="radio" value="processAssess" name="prod_dev_stage" class="show-for-sr">
+                  <label for="prodDevAssess" class="cell">Assessment <span class="helperText">Review &amp; refinement</span></label>
+                </div>
+
+                <div class="cell radioButton">
+                  <input id="prodDevAny" type="radio" value="any" name="prod_dev_stage" class="show-for-sr" checked>
+                  <label for="prodDevAny" class="cell">Across all stages<span class="helperText">Show all methods</span></label>
+                </div>
+              </fieldset>
+
+              <!-- ACTION BUTTON -->
+              <div class="cell action-buttons">
+                <button id="applyFilters" type="submit" name="apply" class="button large radius expanded primary">Find matches</button>
+              </div>
+            
+            </div> <!-- CLOSE SIMPLE TAB PANEL -->
+          
+            <!-- ADVANCED TAB PANEL -->
+            <div class="tabs-panel" id="fullPanel">
+
+              <p>Use the filters to find the most appropriate user research methods for your needs.</p>
+            
+
+              <label for="prodDevPhase">Your stage of product development
+                <span class="helperText">Are you in discovery, execution or assessing?</span>
+              </label>
+              <select id="prodDevPhase" name="prod_dev_phase">
+                  <option value="any">All stages</option>
+                  <option value="processStrategic">Discovery / Strategic - Early stage</option>
+                  <option value="processExecute">Execute - Design, build &amp; test</option>
+                  <option value="processAssess">Assess - Review &amp; refinement</option>
+              </select>
+
+              <label for="contextOfUse">The context of research
+                <span class="helperText">How and where the research is run</span>
+              </label>
+              <select id="contextOfUse" name="context_of_use">
+                  <option value="any">All Contexts</option>
+                  <option value="natural">Natural - In normal usage</option>
+                  <option value="scripted">Scripted - In a scripted setting</option>
+                  <option value="hybrid">Hybrid - Mix of natural/scripted</option>
+                  <option value="de-contextualised">De-contextualised - Out of usage context</option>
+              </select>
+
+              <label for="dataType">Main output data type
+                <span class="helperText">The type of data the research produces</span>
+              </label>
+              <select id="dataType" name="data_type">
+                  <option value="any">All data types</option>
+                  <option value="quantitative">Quantitative - The What</option>
+                  <option value="qualitative">Qualitative - The Why</option>
+              </select>
+
+              <label for="questionType">Research method's main approach
+                <span class="helperText">What type of insights do you need?</span>
+              </label>
+              <select id="questionType" name="question_type">
+                  <option value="any">All approaches</option>
+                  <option value="behavioural">Behavioural - What people do</option>
+                  <option value="attitudinal">Attitudinal - What people think</option>
+              </select>
+              
+              <!-- FORM BUTTONS, SUBMIT & RESET -->
+              <div class="action-buttons">
+                <button id="resetFilters" type="reset" name="reset" class="button hollow large expanded secondary">
+                  Reset search options
+                </button>
+                <button id="applyFilters" type="submit" name="apply" class="button large radius expanded primary">Find matches</button>
+              </div>
+
+            </div><!-- CLOSE ADVANCED TAB PANEL -->
+
+          </form><!-- CLOSE FILTER FORM -->
+
+        </div><!-- CLOSE TAB CONTENTS -->
+
       </div> <!-- CLOSE QueryPanel -->
     </div> <!-- CLOSE CELL -->
 
@@ -116,30 +195,30 @@
         </div>
 
         <ul id="BitItemList" class="cardList no-bullet">
-          {{#each researchMethods.UXRMethods}} 
-            <!-- RESEARCH METHOD CARD-->
-            <li id="{{this.id}}" class="card"
-                data-bm-qualitative="{{this.qualitative}}"
-                data-bm-quantitative="{{this.quantitative}}"
-                data-bm-behavioural="{{this.behavioural}}"
-                data-bm-attitudinal="{{this.attitudinal}}"
-                data-bm-process-strategic="{{this.processStrategic}}"
-                data-bm-process-execute="{{this.processExecute}}"
-                data-bm-process-execute="{{this.processAssess}}"
-                data-bm-context-of-use="{{this.contextOfUse}}">
+        {{#each researchMethods.UXRMethods }} 
+          <!-- RESEARCH METHOD CARD-->
+          <li id="{{this.id}}" class="card"
+              data-bm-qualitative="{{this.qualitative}}"
+              data-bm-quantitative="{{this.quantitative}}"
+              data-bm-behavioural="{{this.behavioural}}"
+              data-bm-attitudinal="{{this.attitudinal}}"
+              data-bm-process-strategic="{{this.processStrategic}}"
+              data-bm-process-execute="{{this.processExecute}}"
+              data-bm-process-assess="{{this.processAssess}}"
+              data-bm-context-of-use="{{this.contextOfUse}}">
 
-                <div class="card-section">
-                  <h3 class="h4">{{this.name}}</h3>
-                  {{#if this.desc }}
-                    <p>{{this.desc}}</p>
-                  {{/if}}
+              <div class="card-section">
+                <h3 class="h4">{{this.name}}</h3>
+                {{#if this.desc }}
+                  <p>{{this.desc}}</p>
+                {{/if}}
 
-                  <!-- CARD LABELS PARTIAL -->
-                  {{> cardlabels}}
+                <!-- CARD LABELS PARTIAL -->
+                {{> cardlabels }}
+              </div><!-- END CARD-SECTION-->
+          </li> 
+        {{/each}}
 
-                </div><!-- END CARD-SECTION-->
-            </li>
-          {{/each}}
         </ul>
       </div> <!-- CLOSE BitManagerKey -->
     </div> <!-- CLOSE QueryAnswers -->
@@ -166,7 +245,7 @@
         </p>
 
         <p class="cell small-8 text-right">
-          Research Picker v1.0 - &copy; 2019 
+          Research Picker v2.00 &copy; 2019 - 2020
           <a href="http://www.uxeng.net/" target="_blank" rel="noopener noreferrer">
             uxeng.net <span class="show-for-sr">(opens in a new window</span>
           </a>

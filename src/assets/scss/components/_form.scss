@@ -11,6 +11,7 @@ body select:focus {
 
 // No-js styles
 // -----------
+.no-js #queryPanel .tabs,
 .no-js #queryPanel form, 
 .no-js #queryAnswers .applied-filter-section,
 .no-js #noMatchesMsg, 
@@ -59,6 +60,127 @@ body select:focus {
 #queryPanel form label {
     font-size: 1.125rem;
     font-weight: 700;
+}
+
+#queryPanel fieldset {
+    margin-bottom: rem-calc(20);
+}
+
+#fullPanel label {
+    line-height: 130%;
+    margin-top: rem-calc(10);
+    margin-bottom: rem-calc(5)
+}
+
+
+// Tabs & Tabs Panel
+// -----------
+#queryPanel .tabs {
+    border-radius: $global-radius
+}
+
+#queryPanel .tabs .tabs-title {
+    font-weight: normal;
+    text-align: center;
+}
+
+#queryPanel .tabs-content {
+    border: 0px solid transparent;
+}
+
+#queryPanel .tabs .tabs-title a {
+    height: 100%;
+}
+
+#queryPanel .tabs-title > a[aria-selected='false'] {
+    background-color: $white;
+} 
+
+#queryPanel .tabs-title > a[aria-selected='true'] {
+    background-color: #EBF4FF;
+    transition: background-color 0.3s ease-in;
+}
+
+// Radio Buttons
+// -----------
+
+.intro {
+    font-size: rem-calc(18);
+    font-weight: 700;
+    margin-bottom: rem-calc(10);
+}
+
+.radioButton {
+    margin: 0;
+}
+
+.radioButton label {
+    line-height: 140%;
+    position: relative;
+    margin-left: rem-calc(20);
+    transition: background-color 0.2s ease-in;
+}
+
+label .helperText {
+    font-size: rem-calc(16);
+    font-weight: 300;
+    display: block;
+    padding-bottom: rem-calc(5);
+}
+
+.radioButton label::before, 
+.radioButton label::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: rem-calc(10);
+    top: rem-calc(8);
+ }
+
+.radioButton label::before {
+    border: 2px solid $dark-gray;
+    border-radius: 50%;
+    height: rem-calc(20);
+    width: rem-calc(20);
+    cursor: pointer;
+}
+
+
+.radioButton input[type='radio']:checked + label::before {
+    border-color: #1E73D7;
+    background-color: $white;
+}
+
+.radioButton input[type='radio'] + label::after {
+    opacity: 0;
+    
+}
+
+// CHECKED RADIO BUTTON STYLES
+.radioButton input[type='radio']:checked + label::after {
+    height: rem-calc(10);
+    width: rem-calc(10);
+    margin: rem-calc(5);
+
+    background-color: #1E73D7;
+    border-radius: 50%;
+
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+}
+
+.radioButton input[type='radio'] + label {
+    padding: rem-calc(5) rem-calc(0) rem-calc(5) rem-calc(40);
+    margin: rem-calc(2) 0;
+    border-radius: $global-radius;
+}
+
+.radioButton input[type='radio']:checked + label {
+    background-color: #EBF4FF;
+}
+
+input[type='radio']:checked:focus + label {
+    outline: rgb(59, 153, 252) auto 5px;
 }
 
 
@@ -279,6 +401,9 @@ ul.cardList .card {
     border-bottom: 1px solid #c9c9c9;
 }
 
+.card-section .h6 {
+    font-weight: 700;
+}
 
 // Labels
 // -----------

@@ -1,0 +1,101 @@
+{{#markdown}}
+
+{{ name }} 
+======
+ ** Observe aggregated user activity across page/screen flows from various 
+ starting points. Useful in identifying actual common tasks performed and journeys taken. 
+ **
+
+It can help to answer questions such as:
+ * What is the most common action taken on a screen?
+ * Are user's getting lost?
+ * Are user's performing the intended tasks from a particular screen?
+ * How long users spend on a page and performing a task?
+This is extremely rich data and can be mined to answer many different questions.
+ 
+
+## In a Nutshell
+In your product install a clickstream analysis tool such as Open Web Analytics, 
+Google Analytics, Adobe Analytics, etc. that captures clicks, gestures, and other user activity. 
+
+Set some questions you'd like to get answers for with regards to user behaviour within your product.
+
+Once installed, capture data over a set period, (a week at the least, typically a month) - 
+start by classifying user groups, filtering the data (disregard small anomalies, and outliers as 
+they skew results) and then create queries on the analytics dashboard to begin identifying 
+patterns based around the questions you initially set. 
+
+It's imperative to remember that these tools tell you what users are doing, but the don’t 
+tell you why they’re doing it.
+
+
+## When is it Typically Used?
+This is used on live products, once they have actual real-world usage with your user population. 
+You wouldn’t typically use this type of analysis on a small cohort of users.
+
+## Measures
+The amount of data that can be captured from a clickstream tools is immense, here are a few:
+ * Timestamp of each and every click/tap
+ * Exact position of click/tap on screen
+ * Type of browser/OS combo used
+ * The amount scrolled on a screen
+ * Amount of time spent on the screen
+ * Next and previous screens
+From this raw data, there are a number of inferred metrics and ratios such as conversion 
+rates that can be calculated and then further aggregated to identify trends.
+
+
+## Real World Tips
+ * Clean your data, prior to analysis and perform rigorous statistical analysis on the data set.
+ * Look at data across different intervals, time of day, day of week, across the month, week on 
+ week, month on month, seasonal shifts etc. if relevant to user behaviour.
+ * Use the data to answer questions you set; blindly going through the data can lead to the drawing 
+ of false conclusions.
+ * Goals and targets can be set and recorded by most systems, to help track and focus key tasks (i.e. purchasing).
+ * Behavioural insights are only useful if you can action on them; tracking user behaviour at a macro 
+ level will in most cases yield a normal distribution - it becomes more powerful when you begin to 
+ segment users and identify behaviours within these cohorts, up on which you can begin to successfully 
+ influence user behaviour for specific groups.
+
+  
+## Positives
+  * Easy way to track user behaviour across your product.
+  * Can provide invaluable real-world and real-time information with regards to this.
+  * Helps to identify what users are doing and can be used to launch more in-depth usability studies 
+  to reveal the why behind behaviours.
+  
+
+## Drawbacks
+  * These tools do not help you determine why users are taking a particular path or performing a task. 
+  For this you need to run a usability study.
+  * Clickstream tools can violate user privacy, as it can track their behaviour - ensure data becomes 
+  anonymised and usage is clearly identified to your users.
+  * Don’t get hung up on tracking vanity metrics - metrics up on which you can't action upon and can't 
+  really influence easily.
+  
+
+## Example Scenario
+On a general store website I might want to see the most common inbound landing pages for those that 
+finally convert into a purchase. 
+
+A clickstream analysis tool can identify this behaviour in detail and identify if users that checkout 
+arrive from a search engine, directly via a bookmark, on the home page, onto a product page, or even 
+a curated offer page.
+
+This insight could then be used to maximise the conversion metrics for each of these different inbound 
+routes using different strategies for each.
+
+
+## Useful Resources - Links
+* <a href="https://www.nngroup.com/videos/vanity-metrics-analytics/" rel="noopener" target="_blank">
+  Vanity Metrics in Analytics <span class="show-for-sr">(Opens in a new window)</span></a>
+* <a href="https://www.nngroup.com/articles/ux-goals-analytics/?lm=vanity-metrics-analytics&pt=youtubevideo" rel="noopener" target="_blank">
+  Translating UX Goals into Analytics Measurement Plans <span class="show-for-sr">(Opens in a new window)</span></a>
+* <a href="https://www.nngroup.com/articles/return-visits-not-bounce/?lm=vanity-metrics-analytics&pt=youtubevideo" rel="noopener" target="_blank">
+  Optimize for Return Visits, not Bounce Rate <span class="show-for-sr">(Opens in a new window)</span></a>
+* <a href="https://www.nngroup.com/videos/bounces-vs-exits-analytics/" rel="noopener" target="_blank">
+  Bounces vs Exits in Web Analytics <span class="show-for-sr">(Opens in a new window)</span></a>
+* <a href="https://www.nngroup.com/videos/conversion-rate-and-ux/?lm=bounces-vs-exits-analytics&pt=youtubevideo" rel="noopener" target="_blank">
+  What Is a Conversion Rate, and What Does It Mean for UX?<span class="show-for-sr">(Opens in a new window)</span></a>
+
+{{/markdown}}

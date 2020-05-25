@@ -248,6 +248,11 @@ $(function() {
         $('body').removeClass('resultState');
     });
 
+    
+    // SET FOCUS IN MODAL
+    $(".cardModal").on("open.zf.reveal", function(evt) {
+        $(evt.target).find(".grid-container.full").focus();
+    });
 
 
     // CHANGE IN BREAKPOINT

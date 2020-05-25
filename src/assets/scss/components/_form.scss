@@ -16,7 +16,8 @@ body select:focus {
 .no-js #queryAnswers .applied-filter-section,
 .no-js #noMatchesMsg, 
 .no-js #secondaryHeader,
-.no-js #queryChangerWrapper
+.no-js #queryChangerWrapper,
+.no-js .moreButtonContainer
 {
     display: none;
 }
@@ -203,6 +204,18 @@ input[type='radio']:checked:focus + label {
     text-align: right;
     font-weight: 700;
 }
+
+.banner h1::after {
+    content: "BETA";
+    font-variant-position: super;
+    vertical-align: super;
+    font-size: 50%;
+    text-transform: none;
+    font-style: italic;;
+    color:#DB5700;
+}
+
+
 
 .banner, 
 .banner h1, 
@@ -407,6 +420,16 @@ ul.cardList .card {
     font-weight: 700;
 }
 
+.card-section .moreButtonContainer {
+    padding-top: rem-calc(12); 
+    text-align: right;
+}
+
+.card-section .moreButtonContainer button {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 // Labels
 // -----------
 .methodLabels .label {
@@ -415,6 +438,7 @@ ul.cardList .card {
     text-transform: uppercase;
     padding: rem-calc(4 5);
     margin-right: rem-calc(3);
+    margin-bottom: rem-calc(3);
     @include border-radius(0);
 }
 
@@ -458,12 +482,108 @@ ul.cardList .card {
     background-color: #65AE00;
 }
 
+// Card Modal
+// -----------
+.cardModal .grid-container {
+    padding-bottom: rem-calc(70);
+}
+
+.cardModal p, 
+.cardModal li {
+    font-size: rem-calc(18);
+}
+
+.cardModal p, 
+.cardModal li {
+    @include breakpoint(large){
+        swidth: 70%;
+    }
+}
+
+.cardModal h2 {
+    font-size: 140%;
+    margin-top: 3rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid $dark-gray;
+}
+
+.cardModal h3 {
+    font-size: 120%;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+
+.cardModal h2#positives + ul {
+    list-style-type: none;
+
+}
+.cardModal h2#positives + ul li:before {
+    content:'+'; /* Change this to unicode as needed*/
+    width: 1em !important;
+    margin-left: -1em;
+    display: inline-block;
+    font-weight: 700;
+    color: #65AE00;
+}
+
+
+.cardModal h2#drawbacks + ul {
+    list-style-type: none;
+
+}
+.cardModal h2#drawbacks + ul li:before {
+    content:'᠆'; /* Change this to unicode as needed*/
+    width: 1rem !important;
+    margin-left: -1em;
+    display: inline-block;
+    font-weight: 700;
+    color: #DB5700;
+}
+
+.cardModal .stickyModal {
+    @include breakpoint(large){
+        display: none;
+    }
+
+    background-color: $white;
+    -webkit-box-shadow: 0px -1px 8px 2px rgba(0,0,0,0.5);
+    box-shadow: 0px -1px 8px 2px rgba(0,0,0,0.5);
+    
+    @include position-fixed-bottom($prototype-position-z-index);
+    position: fixed;
+    min-height: 2rem;
+    width: 100%;
+    bottom: 0;
+
+    text-align: center;
+}
+
+.cardModal .stickyModal .button {
+    position: relative;
+    margin: rem-calc(10) auto;
+    text-transform: uppercase;
+    border-radius: 2rem;
+    padding-left: rem-calc(25);
+    padding-right: rem-calc(25);
+}
+
+.cardModal .stickyModal .button span {
+   font-size: rem-calc(22);
+   padding-right: rem-calc(5);
+}
+
+
+.cardModal table thead {
+    border-bottom: 2px solid $dark-gray;
+}
 
 // Page Footer
 // -----------
 .footer-content {
     margin: 1.5rem 0 4.5rem 0;
-    
 }
 
 .footer-content {

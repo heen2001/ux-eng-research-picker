@@ -97,7 +97,6 @@
             <div class="tabs-panel" id="fullPanel">
 
               <p>Use the filters to find the most appropriate user research methods for your needs.</p>
-            
 
               <label for="prodDevPhase">Your stage of product development
                 <span class="helperText">Are you in discovery, execution or assessing?</span>
@@ -213,8 +212,19 @@
                   <p>{{this.desc}}</p>
                 {{/if}}
 
-                <!-- CARD LABELS PARTIAL -->
-                {{> cardlabels }}
+                
+                <div class="grid-x margin-x">
+                  <!-- CARD LABELS PARTIAL -->
+                  <div class="cell medium-9">
+                    {{> cardlabels }}
+                  </div>
+                  <div class="moreButtonContainer cell medium-3">
+                    <button class="hollow button expanded" data-open="{{ this.progIdentifier }}-modal">
+                      More details <span class="show-for-sr">about {{ this.name }}</span>
+                    </button>
+                  </div>
+                </div>
+
               </div><!-- END CARD-SECTION-->
           </li> 
         {{/each}}
@@ -229,6 +239,42 @@
     </div>
     
   </div> <!-- CLOSE MAIN GRID -->
+
+
+  <!-- MODAL DIALOGS -->
+  {{#each researchMethods.UXRMethods }}
+  <div id="{{ progIdentifier }}-modal" 
+       class="cardModal full reveal"
+       data-reveal 
+       data-animation-in="slide-in-up ease-in" data-animation-out="slide-out-down ease-out" 
+       aria-labelledby="heading-title">
+    
+    <div class="grid-container full" tabindex="-1">
+      <div class="grid-x margin-x">
+        <div class="cell large-6 large-offset-3">
+          {{#> (lookup . 'progIdentifier')  }}
+            Failed to load partial: <strong>{{ progIdentifier }}</strong>
+          {{/undefined}}
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL STICKY FOOTER BUTTON -->
+    <div class="stickyModal">
+      <button class="customClose button primary hollow large" data-close aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span> Close
+      </button>
+    </div>
+
+    <button class="close-button" data-close aria-label="Close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {{/each}}
+  <!-- END - MODAL DIALOGS -->
+
+
+
 </main>
 
 <footer>

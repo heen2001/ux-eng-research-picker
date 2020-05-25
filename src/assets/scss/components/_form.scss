@@ -42,7 +42,7 @@ body select:focus {
 #queryPanel {
     background-color: $white;
     border: 1px solid #c9c9c9;
-    padding: rem-calc(0 20);
+    padding: rem-calc(0 15);
 
     @include breakpoint(medium down) {
         padding-top: 1rem;
@@ -204,18 +204,6 @@ input[type='radio']:checked:focus + label {
     text-align: right;
     font-weight: 700;
 }
-
-.banner h1::after {
-    content: "BETA";
-    font-variant-position: super;
-    vertical-align: super;
-    font-size: 50%;
-    text-transform: none;
-    font-style: italic;;
-    color:#DB5700;
-}
-
-
 
 .banner, 
 .banner h1, 
